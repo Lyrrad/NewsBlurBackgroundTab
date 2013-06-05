@@ -1,0 +1,14 @@
+{
+   "background": {
+      "scripts": [ "listener.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "keypress.js" ],
+      "matches": [ "http://www.newsblur.com/*", "https://www.newsblur.com/*" ]
+   } ],
+  "name": "NewsBlur Background Tab",
+  "version": "1.0",
+  "permissions": [ "http://www.newsblur.com/*"],
+  "description": "Opens the active item in a background tab when the user presses ';'",
+  "manifest_version": 2
+}
