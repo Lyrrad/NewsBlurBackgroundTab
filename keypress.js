@@ -12,7 +12,7 @@
 
 
 		this.keyPressHandler = function(e) {
-			if ( e.keyCode == hotkey && (!e.shiftKey && !e.metaKey && !e.altKey && !e.ctrlKey) ) {
+			if ( e.keyCode == hotkey && (!e.metaKey && !e.altKey && !e.ctrlKey) ) {
 				var popover = document.getElementsByClassName("NB-popover"); // Ignore if popup to add a new feed is visible
 				elems = document.getElementsByClassName("NB-story-title NB-selected");
 				if ( (popover.length == 0) && elems.length) {
