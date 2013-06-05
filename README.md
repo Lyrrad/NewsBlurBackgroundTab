@@ -20,3 +20,8 @@ TODO:
 - Add customizable hotkey
 - Determine if regular "o" hotkey can be overridden.
 - Distribute the crx file.
+
+
+Contact:
+
+github AT lyrrad.com
