@@ -1,6 +1,14 @@
 NewsBlurBackgroundTab
 =====================
 
+Note: This extension appears to be obselete.  Newsblur now opens links in background.
+
+However, it appears that Chrome 41 may break Newsblur's implemnentation.  This is expected to be released to the Stable channel in early March.  If this is the case, I will update this extension to restore this functionality.
+
+See https://github.com/samuelclay/NewsBlur/issues/655 for details.
+
+Old Readme:
+
 NewsBlur Background Tab Chrome Extension
 
 
