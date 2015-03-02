@@ -6,9 +6,13 @@
       "js": [ "keypress.js" ],
       "matches": [ "http://www.newsblur.com/*", "https://www.newsblur.com/*" ]
    } ],
-  "name": "NewsBlur Background Tab",
-  "version": "0.1",
+  "name": "Background Tab for NewsBlur",
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+           "64": "icon64.png",
+          "128": "icon128.png" },
+  "version": "0.2",
   "permissions": [ "http://www.newsblur.com/*"],
-  "description": "Opens the active item in a background tab when the user presses ';'",
+  "description": "Opens the active item in a background tab when the user presses ';' in NewsBlur",
   "manifest_version": 2
 }

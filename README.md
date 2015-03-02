@@ -1,5 +1,9 @@
-NewsBlurBackgroundTab
-=====================
+BackgroundTab for NewsBlur
+==========================
+
+Now licensed under GPL Version 3 and available in the Chrome Web Store:
+https://chrome.google.com/webstore/detail/background-tab-for-newsbl/ieeimmkgocgaaabphkgjdkophaejfnlk/
+
 
 Note: This extension was previously obselete, with Newsblur implementing a function to open links in the background.
 
@@ -7,9 +11,8 @@ However, it appears that Chrome 41 breaks Newsblur's implemnentation.  This vers
 
 See https://github.com/samuelclay/NewsBlur/issues/655 for details on this issue.
 
-Old Readme:
 
-NewsBlur Background Tab Chrome Extension
+
 
 
 This Chrome extension allows you to open the currently selected story in NewsBlur in a background tab by pressing ";".
@@ -24,12 +27,16 @@ To Install:
 It should then be installed.
 
 TODO:
-- Test to make sure it works for others
+- Get feedback about international versions
 - Add customizable hotkey
 - Determine if regular "o" hotkey can be overridden.
 - Distribute the crx file.
 
+Notes:
 
+Icon based off of:
+ Decorative Sun Icon from https://openclipart.org/detail/3367/ivak-Decorative-Sun-by-ivak (public domain)
+ Tango Tab New from https://openclipart.org/detail/34297/tab-new-by-warszawianka (public domain)
 Contact:
 
 github AT lyrrad.com
