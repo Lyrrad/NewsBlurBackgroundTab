@@ -5,9 +5,9 @@ Now licensed under GPL Version 3 and available in the Chrome Web Store:
 https://chrome.google.com/webstore/detail/background-tab-for-newsbl/ieeimmkgocgaaabphkgjdkophaejfnlk/
 
 
-Note: This extension was previously obselete, with Newsblur implementing a function to open links in the background.
+Note: This extension was previously obsolete, with Newsblur implementing a function to open links in the background.
 
-However, it appears that Chrome 41 breaks Newsblur's implemnentation.  This version is expected to be released to the Stable channel in March 2015.  I plan to update this extension, though it appears to still work on Chrome 41 Beta.
+However, Chrome 41 breaks Newsblur's implemnentation.  This version has now been released to the Stable channel in March 2015.
 
 See https://github.com/samuelclay/NewsBlur/issues/655 for details on this issue.
 
