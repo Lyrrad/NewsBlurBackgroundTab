@@ -4,7 +4,7 @@
    },
    "content_scripts": [ {
       "js": [ "keypress.js" ],
-      "matches": [ "http://www.newsblur.com/*", "https://www.newsblur.com/*" ]
+      "matches": [ "http://www.newsblur.com/*", "https://www.newsblur.com/*", "http://newsblur.com/*", "https://newsblur.com/*" ]
    } ],
   "name": "Background Tab for NewsBlur",
   "icons": { "16": "icon16.png",
