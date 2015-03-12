@@ -35,13 +35,15 @@ TODO:
 Notes:
 
 Contributors:
-Marc-Antoine Courteau (@macourteau)
-Randy (@TheQwerty)
-Mirco Macrelli (@mircomacrelli)
+
+* Marc-Antoine Courteau (@macourteau)
+* Randy (@TheQwerty)
+* Mirco Macrelli (@mircomacrelli)
 
 Icon based off of:
- Decorative Sun Icon from https://openclipart.org/detail/3367/ivak-Decorative-Sun-by-ivak (public domain)
- Tango Tab New from https://openclipart.org/detail/34297/tab-new-by-warszawianka (public domain)
+
+ * Decorative Sun Icon from https://openclipart.org/detail/3367/ivak-Decorative-Sun-by-ivak (public domain)
+ * Tango Tab New from https://openclipart.org/detail/34297/tab-new-by-warszawianka (public domain)
 
 Contact:
 
