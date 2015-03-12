@@ -1,5 +1,5 @@
 /**
- * 
+ *
 
  @author Darryl Tam
 
@@ -19,14 +19,22 @@ This file is part of Background Tab for NewsBlur.
 
     You should have received a copy of the GNU General Public License
     along with Background Tab for NewsBlur.  If not, see <http://www.gnu.org/licenses/>.
- 
+
  */
 
 /**
  * This will open up a new background tab with the url passed
  */
 chrome.extension.onMessage.addListener(
-  function(itemURL) {
-		chrome.tabs.create({ url: itemURL.url, active: false });
-	}
+  function(message) {
+    chrome.tabs.query({ active: true },
+      function(current_tab) {
+        var options = { url: message.url, active: false };
+        if (current_tab && current_tab[0] && current_tab[0].index) {
+          options['index'] = current_tab[0].index + 1;
+        }
+        chrome.tabs.create(options);
+      }
+    );
+  }
 );
