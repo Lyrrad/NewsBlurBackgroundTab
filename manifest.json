@@ -11,7 +11,7 @@
            "48": "icon48.png",
            "64": "icon64.png",
           "128": "icon128.png" },
-  "version": "0.2",
+  "version": "0.2.2",
   "permissions": [ "http://www.newsblur.com/*", "https://www.newsblur.com/*" ],
   "description": "Opens the active item in a background tab when the user presses ';' in NewsBlur",
   "manifest_version": 2
