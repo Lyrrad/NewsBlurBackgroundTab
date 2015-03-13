@@ -27,7 +27,7 @@ This file is part of Background Tab for NewsBlur.
  */
 chrome.extension.onMessage.addListener(
   function(message) {
-    chrome.tabs.query({ active: true },
+    chrome.tabs.query({ active: true, currentWindow: true },
       function(current_tab) {
         var options = { url: message.url, active: false };
         if (current_tab && current_tab[0] && current_tab[0].index) {
