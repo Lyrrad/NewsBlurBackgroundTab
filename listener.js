@@ -32,6 +32,8 @@ chrome.extension.onMessage.addListener(
         var options = { url: message.url, active: false };
         if (current_tab && current_tab[0] && current_tab[0].index) {
           options['index'] = current_tab[0].index + 1;
+        } else {
+          options['index'] = 1;
         }
         chrome.tabs.create(options);
       }
