@@ -28,7 +28,7 @@ This file is part of Background Tab for NewsBlur.
 
 		this.keyPressHandler = function(e) {
 			if ( e.keyCode == hotkey && (!e.metaKey && !e.altKey && !e.ctrlKey) ) {
-				var popover = document.getElementsByClassName("NB-popover"); // Ignore if popup to add a new feed is visible
+				var popover = document.querySelectorAll(".NB-popover, .simplemodal-overlay, .NB-overlay"); // Ignore if popups are visible
 				elems = document.getElementsByClassName("NB-story-title NB-selected");
 				if ( (popover.length == 0) && elems.length) {
 					var elems2 = elems.item(0).getElementsByClassName("story_title")
