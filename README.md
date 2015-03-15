@@ -5,17 +5,18 @@ Now licensed under GPL Version 3 and available in the Chrome Web Store:
 https://chrome.google.com/webstore/detail/background-tab-for-newsbl/ieeimmkgocgaaabphkgjdkophaejfnlk/
 
 
+New in 0.3.0: Added customizable hotkey support.
+
+
+
+This Chrome extension allows you to open the currently selected story in NewsBlur in a background tab by pressing a defined hotkey (default ";").
+
 Note: This extension was previously obsolete, with Newsblur implementing a function to open links in the background.
 
-However, Chrome 41 breaks Newsblur's implemnentation.  This version has now been released to the Stable channel in March 2015.
+However, Chrome 41 broke Newsblur's implemnentation.  This version was released to the Stable channel in March 2015.
 
 See https://github.com/samuelclay/NewsBlur/issues/655 for details on this issue.
 
-
-
-
-
-This Chrome extension allows you to open the currently selected story in NewsBlur in a background tab by pressing ";".
 
 To Install:
 1) Download files and put into a directory
@@ -27,10 +28,10 @@ To Install:
 It should then be installed.
 
 TODO:
-- Get feedback about international versions
-- Add customizable hotkey
+- ~~Get feedback about international versions~~
+- ~~Add customizable hotkey~~
 - Determine if regular "o" hotkey can be overridden.
-- Distribute the crx file.
+- ~~Distribute the crx file.~~
 
 Notes:
 

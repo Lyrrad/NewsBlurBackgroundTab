@@ -6,13 +6,17 @@
       "js": [ "keypress.js" ],
       "matches": [ "http://www.newsblur.com/*", "https://www.newsblur.com/*", "http://newsblur.com/*", "https://newsblur.com/*" ]
    } ],
+   "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
   "name": "Background Tab for NewsBlur",
   "icons": { "16": "icon16.png",
            "48": "icon48.png",
            "64": "icon64.png",
           "128": "icon128.png" },
-  "version": "0.2.3",
-  "permissions": [ "http://www.newsblur.com/*"],
-  "description": "Opens the active item in a background tab when the user presses ';' in NewsBlur.",
+  "version": "0.3.0",
+  "permissions": [ "http://www.newsblur.com/*", "storage"],
+  "description": "Opens the active item in a background tab when the user presses a customizable hotkey (default: ';') in NewsBlur.",
   "manifest_version": 2
 }
