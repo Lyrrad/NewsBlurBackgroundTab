@@ -38,6 +38,8 @@ This file is part of Background Tab for NewsBlur.
 				if ( (popover.length == 0) && elems.length && badActiveElement == false) {
 					var elems2 = elems.item(0).getElementsByClassName("story_title")
 					if (elems2.length) {
+						e.preventDefault();
+						e.stopImmediatePropagation();
 						chrome.extension.sendMessage({url: elems2.item(0).href});
 					}
 				}
@@ -48,6 +50,6 @@ This file is part of Background Tab for NewsBlur.
 
 	if (window == top) {
 		var nbt = new NewsBlurBackgroundTab();
-		window.addEventListener('keypress', nbt.keyPressHandler, false);
+		document.body.addEventListener('keypress', nbt.keyPressHandler, false);
 	}
 })();
