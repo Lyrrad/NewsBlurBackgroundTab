@@ -5,11 +5,18 @@ Now licensed under GPL Version 3 and available in the Chrome Web Store:
 https://chrome.google.com/webstore/detail/background-tab-for-newsbl/ieeimmkgocgaaabphkgjdkophaejfnlk/
 
 
+New in 0.4.0: 
+
+* Able to override Newsblur hotkeys (default "o" and "v"). (Thanks to Gary Pandergast (@pento) for showing how this can be done and submitting a pull request)
+* Added support for multiple hotkeys.
+* Changed to local storage instead of using Chrome Sync to store extension settings.
+
+
 New in 0.3.0: Added customizable hotkey support.
 
 
 
-This Chrome extension allows you to open the currently selected story in NewsBlur in a background tab by pressing a defined hotkey (default ";").
+This Chrome extension allows you to open the currently selected story in NewsBlur in a background tab by pressing a defined hotkey (default "o" and "v").
 
 Note: This extension was previously obsolete, with Newsblur implementing a function to open links in the background.
 
@@ -37,9 +44,11 @@ Notes:
 
 Contributors:
 
+* Gary Pandergast (@pento)
 * Marc-Antoine Courteau (@macourteau)
 * Randy (@TheQwerty)
 * Mirco Macrelli (@mircomacrelli)
+
 
 Icon based off of:
 

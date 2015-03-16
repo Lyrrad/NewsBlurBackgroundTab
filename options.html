@@ -10,9 +10,26 @@
 
 <body>
   
-  <label>
-    Hotkey: <input type="text" id="hotkey" maxlength="1" size="1">
+   <label>
+    <input type="checkbox" id="isDefault"> Enable Default Hotkeys
   </label>
+
+  <br>
+  <br>
+  <label>
+    <input type="text" id="hotkey1" maxlength="1" size="1"> Primary Hotkey
+  </label>
+  <br>
+  <br>
+  <label>
+    <input type="checkbox" id="isSecondHotkeyEnabled"> Enable Alternate Hotkey
+  </label>
+  <br>
+  <br>
+  <label>
+    <input type="text" id="hotkey2" maxlength="1" size="1"> Alternate Hotkey <br><br>
+  </label>
+  
 
   <div id="status"></div>
   <button id="save">Save</button>
