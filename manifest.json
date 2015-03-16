@@ -15,8 +15,8 @@
            "48": "icon48.png",
            "64": "icon64.png",
           "128": "icon128.png" },
-  "version": "0.3.0",
+  "version": "0.4.0",
   "permissions": [ "http://www.newsblur.com/*", "storage"],
-  "description": "Opens the active item in a background tab when the user presses a customizable hotkey (default: ';') in NewsBlur.",
+  "description": "Opens the active item in a background tab when the user presses a customizable hotkeys (default: 'o' and 'v') in NewsBlur.",
   "manifest_version": 2
 }

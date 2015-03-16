@@ -23,15 +23,21 @@ This file is part of Background Tab for NewsBlur.
 
   var NewsBlurBackgroundTab = function() {
 
-		var hotkey;
-		chrome.storage.sync.get({
-		    savedHotkey: ';'
+		var hotkey1;
+		var hotkey2;
+		var isSecondHotkeyEnabled;
+		chrome.storage.local.get({
+		    savedHotkey1: 'o',
+    		savedIsSecondHotkeyEnabled: "true",
+			savedHotkey2: 'v'
 		  }, function(items) {
-		    hotkey = items.savedHotkey.charCodeAt(0);
+		    hotkey1 = items.savedHotkey1.charCodeAt(0);
+		    isSecondHotkeyEnabled = items.savedIsSecondHotkeyEnabled == "true";
+		    hotkey2 = items.savedHotkey2.charCodeAt(0);
 		  });
 		
 		this.keyPressHandler = function(e) {
-			if ( e.keyCode == hotkey && (!e.metaKey && !e.altKey && !e.ctrlKey) ) {
+			if ( (e.keyCode == hotkey1 || (isSecondHotkeyEnabled == true && e.keyCode == hotkey2)) && (!e.metaKey && !e.altKey && !e.ctrlKey) ) {
 				var popover = document.querySelectorAll(".NB-popover, .simplemodal-overlay, .NB-overlay"); // Ignore if popups are visible
 				var badActiveElement = document.activeElement.nodeName == "TEXTAREA" || document.activeElement.nodeName == "INPUT";
 				elems = document.getElementsByClassName("NB-story-title NB-selected");
