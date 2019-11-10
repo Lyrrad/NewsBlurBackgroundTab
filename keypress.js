@@ -46,7 +46,8 @@ This file is part of Background Tab for NewsBlur.
 					if (elems2.length) {
 						e.preventDefault();
 						e.stopImmediatePropagation();
-						browser.runtime.sendMessage({url: elems2.item(0).href});
+						console.log('Sending URL: ' + elems2.item(0).href);
+						chrome.runtime.sendMessage({url: elems2.item(0).href});
 					}
 				}
 		
