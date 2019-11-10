@@ -1,8 +1,6 @@
 BackgroundTab for NewsBlur
 ==========================
 
-_Note from jscher2000: This is a port for Firefox with extremely minimal changes just to get the hotkeys to work. It is not yet published to AMO. You can download the zip file, unarchive it, and use about:debugging to load it as a temporary extension. Please files issues for problems you notice. And now back to the original author's README._
-
 Now licensed under GPL Version 3 and available in the Chrome Web Store:
 https://chrome.google.com/webstore/detail/background-tab-for-newsbl/ieeimmkgocgaaabphkgjdkophaejfnlk/
 
