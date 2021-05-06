@@ -4,7 +4,7 @@
    },
    "content_scripts": [ {
       "js": [ "keypress.js" ],
-      "matches": [ "http://www.newsblur.com/*", "https://www.newsblur.com/*", "http://newsblur.com/*", "https://newsblur.com/*" ]
+      "matches": [ "http://www.newsblur.com/*", "https://www.newsblur.com/*", "http://newsblur.com/*", "https://newsblur.com/*", "http://beta.newsblur.com/*", "https://beta.newsblur.com/*" ]
    } ],
    "options_ui": {
     "page": "options.html",
