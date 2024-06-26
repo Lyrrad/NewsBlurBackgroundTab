@@ -1,14 +1,13 @@
 {
    "background": {
-      "scripts": [ "listener.js" ]
+      "service_worker": "listener.js"
    },
    "content_scripts": [ {
       "js": [ "keypress.js" ],
       "matches": [ "http://www.newsblur.com/*", "https://www.newsblur.com/*", "http://newsblur.com/*", "https://newsblur.com/*", "http://beta.newsblur.com/*", "https://beta.newsblur.com/*" ]
    } ],
    "options_ui": {
-    "page": "options.html",
-    "chrome_style": true
+    "page": "options.html"
   },
   "name": "Background Tab for NewsBlur",
   "icons": { "16": "icon16.png",
@@ -16,7 +15,10 @@
            "64": "icon64.png",
           "128": "icon128.png" },
   "version": "0.4.1",
-  "permissions": [ "http://www.newsblur.com/*", "storage"],
+  "permissions": [ "storage"],
+  "host_permissions": [
+    "http://www.newsblur.com/*", "https://www.newsblur.com/*", "http://newsblur.com/*", "https://newsblur.com/*", "http://beta.newsblur.com/*", "https://beta.newsblur.com/*"
+  ],
   "description": "Opens the active item in a background tab when the user presses a customizable hotkeys (default: 'o' and 'v') in NewsBlur.",
-  "manifest_version": 2
+  "manifest_version": 3
 }

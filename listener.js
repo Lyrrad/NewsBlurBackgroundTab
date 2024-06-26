@@ -25,18 +25,16 @@ This file is part of Background Tab for NewsBlur.
 /**
  * This will open up a new background tab with the url passed
  */
-chrome.runtime.onMessage.addListener(
-  function(message) {
-    chrome.tabs.query({ active: true, currentWindow: true },
-      function(current_tab) {
-        var options = { url: message.url, active: false };
-        if (current_tab && current_tab[0] && current_tab[0].index) {
-          options['index'] = current_tab[0].index + 1;
-        } else {
-          options['index'] = 1;
-        }
-        chrome.tabs.create(options);
-      }
-    );
-  }
-);
+chrome.runtime.onMessage.addListener((message) => {
+  chrome.tabs.query({ active: true, currentWindow: true }).then((current_tab) => {
+    let options = { url: message.url, active: false };
+    if (current_tab && current_tab[0] && current_tab[0].index !== undefined) {
+      options.index = current_tab[0].index + 1;
+    } else {
+      options.index = 1;
+    }
+    chrome.tabs.create(options);
+  }).catch((error) => {
+    console.error("Error querying tabs: ", error);
+  });
+});
