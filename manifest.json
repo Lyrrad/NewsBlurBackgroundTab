@@ -14,7 +14,7 @@
            "48": "icon48.png",
            "64": "icon64.png",
           "128": "icon128.png" },
-  "version": "0.4.1",
+  "version": "0.5.0",
   "permissions": [ "storage"],
   "host_permissions": [
     "http://www.newsblur.com/*", "https://www.newsblur.com/*", "http://newsblur.com/*", "https://newsblur.com/*", "http://beta.newsblur.com/*", "https://beta.newsblur.com/*"
