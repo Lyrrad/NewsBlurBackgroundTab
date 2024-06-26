@@ -19,43 +19,43 @@ This file is part of Background Tab for NewsBlur.
     You should have received a copy of the GNU General Public License
     along with Background Tab for NewsBlur.  If not, see <http://www.gnu.org/licenses/>.
  */
-(function(){
-
+(function() {
   var NewsBlurBackgroundTab = function() {
+    var hotkey1;
+    var hotkey2;
+    var isSecondHotkeyEnabled;
 
-		var hotkey1;
-		var hotkey2;
-		var isSecondHotkeyEnabled;
-		chrome.storage.local.get({
-		    savedHotkey1: 'o',
-    		savedIsSecondHotkeyEnabled: "true",
-			savedHotkey2: 'v'
-		  }, function(items) {
-		    hotkey1 = items.savedHotkey1.charCodeAt(0);
-		    isSecondHotkeyEnabled = items.savedIsSecondHotkeyEnabled == "true";
-		    hotkey2 = items.savedHotkey2.charCodeAt(0);
-		  });
-		
-		this.keyPressHandler = function(e) {
-			if ( (e.keyCode == hotkey1 || (isSecondHotkeyEnabled == true && e.keyCode == hotkey2)) && (!e.metaKey && !e.altKey && !e.ctrlKey) ) {
-				var popover = document.querySelectorAll(".NB-popover, .simplemodal-overlay, .NB-overlay"); // Ignore if popups are visible
-				var badActiveElement = document.activeElement.nodeName == "TEXTAREA" || document.activeElement.nodeName == "INPUT";
-				elems = document.getElementsByClassName("NB-story-title NB-selected");
-				if ( (popover.length == 0) && elems.length && badActiveElement == false) {
-					var elems2 = elems.item(0).getElementsByClassName("story_title")
-					if (elems2.length) {
-						e.preventDefault();
-						e.stopImmediatePropagation();
-						chrome.runtime.sendMessage({url: elems2.item(0).href});
-					}
-				}
-		
-			}
-		}
-	};
+    chrome.storage.local.get({
+      savedHotkey1: 'o',
+      savedIsSecondHotkeyEnabled: "true",
+      savedHotkey2: 'v'
+    }).then((items) => {
+      hotkey1 = items.savedHotkey1.charCodeAt(0);
+      isSecondHotkeyEnabled = items.savedIsSecondHotkeyEnabled == "true";
+      hotkey2 = items.savedHotkey2.charCodeAt(0);
+    }).catch((error) => {
+      console.error("Error loading settings: ", error);
+    });
 
-	if (window == top) {
-		var nbt = new NewsBlurBackgroundTab();
-		document.body.addEventListener('keypress', nbt.keyPressHandler, false);
-	}
+    this.keyPressHandler = function(e) {
+      if ((e.keyCode == hotkey1 || (isSecondHotkeyEnabled && e.keyCode == hotkey2)) && (!e.metaKey && !e.altKey && !e.ctrlKey)) {
+        var popover = document.querySelectorAll(".NB-popover, .simplemodal-overlay, .NB-overlay"); // Ignore if popups are visible
+        var badActiveElement = document.activeElement.nodeName == "TEXTAREA" || document.activeElement.nodeName == "INPUT";
+        elems = document.getElementsByClassName("NB-story-title NB-selected");
+        if ((popover.length == 0) && elems.length && !badActiveElement) {
+          var elems2 = elems.item(0).getElementsByClassName("story_title");
+          if (elems2.length) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            chrome.runtime.sendMessage({ url: elems2.item(0).href });
+          }
+        }
+      }
+    };
+  };
+
+  if (window == top) {
+    var nbt = new NewsBlurBackgroundTab();
+    document.body.addEventListener('keypress', nbt.keyPressHandler, false);
+  }
 })();

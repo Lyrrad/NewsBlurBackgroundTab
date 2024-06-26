@@ -4,10 +4,16 @@ BackgroundTab for NewsBlur
 Now licensed under GPL Version 3 and available in the Chrome Web Store:
 https://chrome.google.com/webstore/detail/background-tab-for-newsbl/ieeimmkgocgaaabphkgjdkophaejfnlk/
 
+
+New in 0.5.0:
+
+* Migrate to Manifest V3.
+* Known issue: Customized hotkeys not working.  It should still work with the default "o" and "v" hotkeys. Pull requests or suggestion welcome.
+
 New in 0.4.1:
 
-  * Add support for beta.newsblur.com (Thanks @doofusdavid)
-  * Migrated from deprecated chrome.extension to chrome.runtime (Thanks @jscher2000)
+* Add support for beta.newsblur.com (Thanks @doofusdavid)
+* Migrated from deprecated chrome.extension to chrome.runtime (Thanks @jscher2000)
 
 New in 0.4.0: 
 
